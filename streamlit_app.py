@@ -1,6 +1,6 @@
 import streamlit
 
-streamlit.title('My Parents New Healthy Dinner')
+streamlit.title('My Mom's New Healthy Dinner')
 
 streamlit.header('Breakfast Menu') 
 streamlit.text('🥣 Omege 3 & Blueberry Oatmeal')
@@ -27,5 +27,10 @@ fruits_selected =streamlit.multiselect("Pick some fruits:", list(my_fruit_list.i
 fruits_to_show= my_fruit_list.loc[fruits_selected]
 
 streamlit.dataframe(fruits_to_show)
+
+streamlit.header("Fruityvice Fruit Advice!")
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+streamlit.text(fruityvice_response)
 
 
