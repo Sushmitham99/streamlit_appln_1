@@ -2,7 +2,7 @@ import streamlit
 
 streamlit.title("My Mom's New Healthy Dinner")
 
-streamlit.header('Breakfast Menu') 
+streamlit.header('Breakfast Favorites') 
 streamlit.text('🥣 Omege 3 & Blueberry Oatmeal')
 streamlit.text('🥗 Kale, Spinach & Rocket Smoothie')
 streamlit.text('🐔 Hard boiled Free-Range Egg')
@@ -28,10 +28,10 @@ fruits_to_show= my_fruit_list.loc[fruits_selected]
 
 streamlit.dataframe(fruits_to_show)
 
-streamlit.header("Fruityvice Fruit Advice!")
+
 
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 streamlit.text(fruityvice_response)
 
-
+streamlit.header("Fruityvice Fruit Advice!")
