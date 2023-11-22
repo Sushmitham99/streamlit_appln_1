@@ -35,4 +35,4 @@ fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon"
 streamlit.text(fruityvice_response)
 
 streamlit.header("Fruityvice Fruit Advice!")
-streamlit.text(fruity_vice_response.json())
+streamlit.text(fruityvice_response.json())
